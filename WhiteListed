@@ -1,0 +1,185 @@
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Arsenal";
+    Text = "Made by Aiah#7856"; -- (oWo ! [ღ] 𝔸𝕜𝕕𝕖𝕟𝕚𝕫#4752)
+    Duration = 5;
+})
+---------
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+local X = Material.Load({
+	Title = "E v e  y n h u b / Arsenal",
+	Style = 3,
+	SizeX = 500,
+	SizeY = 350,
+	Theme = "Dark",
+	ColorOverrides = {
+		MainFrame = Color3.fromRGB(45,45,45)
+	}
+})
+--
+local Y = X.New({
+	Title = "Scripts"
+})
+
+local Z = X.New({
+	Title = "Home"
+})
+
+local A = Y.Button({
+	Text = "DarkHub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init", true))()
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = ""
+			})
+		end
+	}
+})
+---
+local A = Y.Button({
+	Text = "OwlHub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = ""
+			})
+		end
+	}
+})
+---
+local A = Y.Button({
+	Text = "NexusHub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/GwnStefano/NexusHub/main/Main", true))()
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = ""
+			})
+		end
+	}
+})
+-------
+local A = Y.Button({
+	Text = "VG.Hub",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = ""
+			})
+		end
+	}
+})
+-----------
+local A = Y.Button({
+	Text = "BoltsHubV5",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/fusiongreg/BoltsHubV5/main/Main", true))()
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = ""
+			})
+		end
+	}
+})
+----------------------
+local C = Y.Slider({
+	Text = "Set your fps when did you set it  will get be higher.",
+	Callback = function(Value)
+		print(Value)
+	end,
+	Min = 60,
+	Max = 750,
+	Def = 60
+})
+---
+local A = Y.ChipSet({
+	Text = "ESP",
+	Callback = function(ChipSet)
+		table.foreach(ChipSet, function(Option, Value)
+			print(Option, Value)
+		end)
+	end,
+	Options = {
+		ESP = true,
+		TeamCheck = false,
+		UselessBool = {
+			Enabled = true,
+			Menu = {
+				Information = function(self)
+					X.Banner({
+						Text = "Promotion"
+					})
+				end
+			}
+		}
+	}
+})
+---------------------
+local A = Y.DataTable({
+	Text = "ESP Settings",
+	Callback = function(ChipSet)
+		table.foreach(ChipSet, function(Option, Value)
+			print(Option, Value)
+		end)
+	end,
+	Options = {
+		ESP2 = true,
+		TeamCheck2 = false,
+		UselessBool2 = {
+			Enabled = true,
+			Menu = {
+				Information = function(self)
+					X.Banner({
+						Text = "This esp idk"
+					})
+				end
+			}
+		}
+	}
+})
+-----------------
+local A = Y.ColorPicker({
+	Text = "ESP Colour",
+	Default = Color3.fromRGB(0,255,110),
+	Callback = function(Value)
+		print("RGB:", Value.R * 255, Value.G * 255, Value.B * 255)
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "This changes the color of your ESP."
+			})
+		end
+	}
+})
+------------------
+local H = Y.TextField({
+	Text = "Country",
+	Callback = function(Value)
+		print(Value)
+	end,
+	Menu = {
+		GB = function(self)
+			self.SetText("AZ")
+		end,
+		JP = function(self)
+			self.SetText("TR")
+		end,
+		KO = function(self)
+			self.SetText("UK")
+		end
+	}
+})
